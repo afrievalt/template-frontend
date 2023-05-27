@@ -1,23 +1,21 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Details from "./Details";
 import SearchParams from "./SearchParams";
-import * as Test from 'react-final-form-toolkit'
-console.log(Test)
+import * as Test from "react-final-form-toolkit";
+import AppProvider from "./AppProvider";
+console.log(Test);
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <header>
-          <Link to="/">Adopt Me!</Link>
-          
-        </header>
-        <Routes>
-          <Route path="/details/:id" element={<Details />} />
-          <Route path="/" element={<SearchParams />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <AppProvider>
+      <header>
+        <Link to="/">Adopt Me!</Link>
+      </header>
+      <Routes>
+        <Route path="/details/:id" element={<Details />} />
+        <Route path="/" element={<SearchParams />} />
+      </Routes>
+    </AppProvider>
   );
 };
 
