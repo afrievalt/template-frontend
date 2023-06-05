@@ -1,19 +1,16 @@
 import { createRoot } from "react-dom/client";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Details from "./Details";
-import SearchParams from "./SearchParams";
 import * as Test from "react-final-form-toolkit";
 import AppProvider from "./AppProvider";
+import TaskPage from "./pages/tasks/TaskPage";
 console.log(Test);
 const App = () => {
   return (
     <AppProvider>
-      <header>
-        <Link to="/">Adopt Me!</Link>
-      </header>
       <Routes>
         <Route path="/details/:id" element={<Details />} />
-        <Route path="/" element={<SearchParams />} />
+        <Route path="/" element={<TaskPage />} />
       </Routes>
     </AppProvider>
   );

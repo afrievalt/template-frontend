@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-
-const rootReducer = combineReducers({ })
+import task from './todo.slice'
+const rootReducer = combineReducers({ task})
 
 export default rootReducer
