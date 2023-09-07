@@ -7,7 +7,7 @@ const Pet = (props) => {
   if (images.length) {
     hero = images[0];
   }
-
+  // render
   return (
     <Link to={`/details/${id}`} className="pet">
       <div className="image-container">
